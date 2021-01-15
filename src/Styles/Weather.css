@@ -1,0 +1,142 @@
+.weather-container {    
+    height: 625px;
+    width: 80%;
+    position: relative;
+    padding: 10px;    
+}
+
+.weather-header h3{
+    font-size: 2.3rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: bolder;
+    color:white;
+}
+
+.weather-header div {
+    border-bottom: 2px solid #eee;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+}
+
+input:focus {
+    outline:none;
+}
+
+.search-input {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 4px;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+.weather-header button {
+    border: none;
+    background: transparent;
+    color: black;
+    cursor: pointer;
+    outline: none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: .5; /* Firefox */
+    font-size: 1.1rem;
+}
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+}
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+}
+
+.weather-info{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-top: 100px;
+}
+
+
+.weather-info i {
+    color: yellow;
+    position: relative;
+    top: 5px;
+    left: 5px;
+    animation: rotateSun 5s infinite linear;
+}
+
+@keyframes rotateSun {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.error {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: red;
+    font-size: 1.3rem;
+}
+
+.header-description {
+    text-align: center;
+
+}
+
+.weather-info h3{
+    margin-bottom: 0;
+    font-size: 2.0rem;
+}
+
+.degree-symbol::after {
+    content: '\00b0'
+}
+
+@media screen and (min-width: 700px) {
+    .weather-container {
+        height: 350px;
+        width: 80%;
+    }
+    .weather-header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between ;
+        margin-top: 25px;
+
+    }
+    .weather-header h3 {
+        margin: 0;
+    }
+    .weather-header div {
+       width: 50%; 
+       margin: 0;
+    }
+
+    .weather-info {
+        height:100px;
+        margin-top: 65px;
+    
+    }
+
+    .weather-data-flex{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+}
+
